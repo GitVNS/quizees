@@ -1,3 +1,3 @@
 # quizees
 
-A new Flutter project.
+A Quiz application UI in Flutter.
