@@ -90,13 +90,3 @@ List<QuizData> geographyQuiz = [
       optionD: "None of the above",
       answer: 3),
 ];
-// List<QuizData> scienceQuiz = [];
-// List<QuizData> mathematicsQuiz = [];
-// List<QuizData> historyQuiz = [];
-// List<QuizData> sportsQuiz = [];
-// List<QuizData> artQuiz = [];
-// List<QuizData> filmQuiz = [];
-// List<QuizData> socialQuiz = [];
-// List<QuizData> foodQuiz = [];
-// List<QuizData> animalsQuiz = [];
-// List<QuizData> birdsQuiz = [];

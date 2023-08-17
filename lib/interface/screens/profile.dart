@@ -204,12 +204,12 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
   Widget makeInfoLayout({required Size size}) {
     return SizedBox(
       width: size.width,
-      height: size.width * 0.9,
+      height: 320,
       child: Stack(
         alignment: Alignment.center,
         children: [
           Positioned(
-            top: (size.width * 0.3) / 2,
+            top: 50,
             left: 0,
             right: 0,
             bottom: 0,
@@ -231,7 +231,7 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
         color: ThemeColors.primarySwatch.shade50,
       ),
       alignment: Alignment.center,
-      padding: EdgeInsets.fromLTRB(8, (size.width * 0.15) + 8, 8, 8),
+      padding: const EdgeInsets.fromLTRB(8, 66, 8, 8),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -246,57 +246,57 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
             ),
           ),
           const Space(vertical: 8),
-          Expanded(
-            child: Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: ThemeColors.primarySwatch.shade700),
-              child: IntrinsicHeight(
-                child: Row(
-                  children: [
-                    Expanded(
-                      flex: 1,
-                      child: makeSubInfoColumn(
-                          iconData: FontAwesomeIcons.solidStar,
-                          title: "Quiz Points",
-                          information: "200"),
-                    ),
-                    VerticalDivider(
-                      color: ThemeColors.primarySwatch.shade200,
-                      thickness: 2,
-                    ),
-                    Expanded(
-                      flex: 1,
-                      child: makeSubInfoColumn(
-                          iconData: FontAwesomeIcons.rankingStar,
-                          title: "Friends Rank",
-                          information: "N/A"),
-                    ),
-                  ],
-                ),
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: ThemeColors.primarySwatch.shade700),
+            child: IntrinsicHeight(
+              child: Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: makeSubInfoColumn(
+                        iconData: FontAwesomeIcons.solidStar,
+                        title: "Quiz Points",
+                        information: "200"),
+                  ),
+                  VerticalDivider(
+                    color: ThemeColors.primarySwatch.shade200,
+                    thickness: 2,
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: makeSubInfoColumn(
+                        iconData: FontAwesomeIcons.rankingStar,
+                        title: "Friends Rank",
+                        information: "N/A"),
+                  ),
+                ],
               ),
             ),
           ),
           const Space(vertical: 8),
-          Material(
-            borderRadius: BorderRadius.circular(8),
-            child: InkWell(
-              splashFactory: InkSparkle.splashFactory,
+          Expanded(
+            child: Material(
               borderRadius: BorderRadius.circular(8),
-              onTap: () {
-                toggleContainer();
-              },
-              child: Ink(
-                decoration: BoxDecoration(
-                  color: ThemeColors.primarySwatch.shade100,
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: Center(
-                  child: FaIcon(
-                    FontAwesomeIcons.pen,
-                    color: ThemeColors.primarySwatch.shade700,
+              child: InkWell(
+                splashFactory: InkSparkle.splashFactory,
+                borderRadius: BorderRadius.circular(8),
+                onTap: () {
+                  toggleContainer();
+                },
+                child: Ink(
+                  decoration: BoxDecoration(
+                    color: ThemeColors.primarySwatch.shade100,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: Center(
+                    child: FaIcon(
+                      FontAwesomeIcons.pen,
+                      color: ThemeColors.primarySwatch.shade700,
+                    ),
                   ),
                 ),
               ),
@@ -335,8 +335,6 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
 
   Widget makeProfilePhoto({required Size size}) {
     return Container(
-      height: size.width * 0.3,
-      width: size.width * 0.3,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border: Border.all(color: ThemeColors.primarySwatch.shade100, width: 3),
@@ -344,8 +342,8 @@ class _ProfileState extends State<Profile> with TickerProviderStateMixin {
       alignment: Alignment.center,
       padding: const EdgeInsets.all(3),
       child: Container(
-        width: size.width * 0.3,
-        height: size.width * 0.3,
+        width: 97,
+        height: 97,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: ThemeColors.primarySwatch.shade100,
